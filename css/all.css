@@ -1137,7 +1137,7 @@ span.ui-selectmenu-text {
 }
 @media all and (max-width: 600px) {
   .menu-holder {
-    width: 90%;
+    width: 100%;
   }
 }
 
