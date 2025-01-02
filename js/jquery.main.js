@@ -9,6 +9,8 @@ $(document).ready(function(){
 
   $( ".nav-menu" ).menu();
 
+  $( "#accordion, .accordion" ).accordion();
+
   var originalText = $('.menu-holder .ui-selectmenu-text').text();
 	$('.open-menu').click(function() {
 	 	$('.menu-holder').toggleClass('open');

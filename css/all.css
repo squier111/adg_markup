@@ -71,9 +71,10 @@ h3 sup {
 }
 
 h4 {
-  font: 21px/23px "Inter", sans-serif, sans-serif;
+  font: 14px/20px "Inter", sans-serif, sans-serif;
   color: #152238;
-  margin: 0 0 12px;
+  font-weight: 600;
+  margin: 0;
 }
 
 p {
@@ -84,6 +85,11 @@ p {
 
 a {
   color: #152238;
+}
+
+dl {
+  margin: 0;
+  padding: 0;
 }
 
 input[type=number]::-webkit-inner-spin-button,
@@ -247,11 +253,11 @@ input[type=text]:-ms-input-placeholder {
 }
 
 input[type=submit] {
-  -webkit-transition: all 0.2s linear;
-  -moz-transition: all 0.2s linear;
-  -ms-transition: all 0.2s linear;
-  -o-transition: all 0.2s linear;
-  transition: all 0.2s linear;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
   cursor: pointer;
   height: 48px;
   min-width: 185px;
@@ -429,11 +435,11 @@ input[type=submit]:hover {
 }
 
 #main {
-  -webkit-transition: padding 0.2s linear;
-  -moz-transition: padding 0.2s linear;
-  -ms-transition: padding 0.2s linear;
-  -o-transition: padding 0.2s linear;
-  transition: padding 0.2s linear;
+  -webkit-transition: padding 0.2s ease-in-out;
+  -moz-transition: padding 0.2s ease-in-out;
+  -ms-transition: padding 0.2s ease-in-out;
+  -o-transition: padding 0.2s ease-in-out;
+  transition: padding 0.2s ease-in-out;
 }
 
 #main.open {
@@ -723,12 +729,11 @@ input[type=submit]:hover {
   display: none;
 }
 .breadcrumps li a {
-  -webkit-transition: all 0.2s linear;
-  -moz-transition: all 0.2s linear;
-  -ms-transition: all 0.2s linear;
-  -o-transition: all 0.2s linear;
-  transition: all 0.2s linear;
-  transition: all 0.2s linear;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
   text-decoration: none;
   color: #737A88;
   padding: 7px 14px;
@@ -800,7 +805,8 @@ input[type=submit]:hover {
   background: #fff;
   border: 1px #E3E4E7 solid;
   border-radius: 20px;
-  padding: 25px;
+  padding: 10px 15px;
+  margin-bottom: 20px;
 }
 
 .form-row {
@@ -1097,6 +1103,169 @@ span.ui-selectmenu-text {
   border-color: #152238;
 }
 
+.more-btn {
+  background: #fff;
+  border: 1px #E3E4E7 solid;
+  color: #152238;
+  display: flex;
+  margin: 0;
+  width: 36px;
+  height: 36px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  flex: 0 0 auto;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 700;
+  font-style: normal;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+.more-btn:active, .more-btn:hover {
+  background: #2483E2;
+  color: #fff;
+  border-color: #fff;
+}
+
+.purchase-order-info-list {
+  display: flex;
+  column-gap: 36px;
+  row-gap: 20px;
+  flex-wrap: wrap;
+}
+.purchase-order-info-list li .title {
+  font-size: 12px;
+  font-weight: 600;
+  color: #5B6474;
+  display: block;
+  margin-bottom: 5px;
+}
+.purchase-order-info-list li .info {
+  font-size: 14px;
+  color: #00091F;
+}
+
+.purchase-order-holder {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ui-accordion {
+  position: relative;
+}
+.ui-accordion .ui-accordion-header {
+  padding: 10px 10px 10px 50px;
+  margin: 0 0 15px;
+  column-gap: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 16px !important;
+  border-color: #E3E4E7;
+}
+.ui-accordion .ui-accordion-content {
+  margin: 0 0 15px;
+  overflow: inherit;
+  height: auto !important;
+  padding: 10px 0 0 0;
+  border: none;
+}
+.ui-accordion .ui-accordion-header-active {
+  margin: 0;
+  border-radius: 16px !important;
+}
+.ui-accordion .ui-accordion-header-active .ui-accordion-header-icon {
+  margin: -4px 0 0 0;
+  transform: rotate(-135deg);
+}
+.ui-accordion .ui-accordion-header-active,
+.ui-accordion .ui-state-hover {
+  background-color: #F2F7FD;
+  border-color: #E3E4E7;
+}
+.ui-accordion .ui-accordion-header-icon {
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -ms-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+  position: absolute;
+  top: 50%;
+  left: 23px;
+  margin: 0;
+  background: none;
+  width: 8px;
+  height: 8px;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  border-color: #2483E2;
+  transform: rotate(45deg) translate(-50%, -50%);
+  transform-origin: center;
+}
+.ui-accordion .right-holder {
+  display: flex;
+  align-items: center;
+  column-gap: 30px;
+}
+
+.price-amount-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  column-gap: 38px;
+  row-gap: 10px;
+  color: #00091F;
+}
+.price-amount-list .price {
+  font-weight: 600;
+}
+
+.price-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+.price-list .price-box {
+  overflow: hidden;
+  border: 1px #E3E4E7 solid;
+  border-radius: 16px;
+}
+.price-list .price-box:nth-last-child(2), .price-list .price-box:last-child {
+  grid-column: 3;
+}
+.price-list .price-header {
+  background: #f6f6f7;
+  padding: 10px;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+dl {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 13px;
+  padding: 10px;
+}
+dl dt {
+  font-weight: normal;
+  text-align: left;
+}
+dl dd {
+  margin: 0;
+  font-weight: 700;
+  text-align: right;
+}
+dl address {
+  font-style: normal;
+}
+
 @media all and (max-width: 1110px) {
   form .two-columns {
     flex-direction: column;
@@ -1104,6 +1273,17 @@ span.ui-selectmenu-text {
   form .two-columns .col {
     flex: 1 1 100%;
     width: 100%;
+  }
+  .price-list {
+    display: flex;
+    flex-direction: column;
+  }
+  .purchase-order-info-list {
+    row-gap: 20px;
+  }
+  .purchase-order-info-list li {
+    flex: 1 1 20%;
+    width: 20%;
   }
 }
 @media all and (max-width: 960px) {
@@ -1119,6 +1299,14 @@ span.ui-selectmenu-text {
     justify-content: center;
     align-items: flex-start;
   }
+  .breadcrumps {
+    flex-direction: column;
+    row-gap: 10px;
+  }
+  .purchase-order-info-list li {
+    flex: 1 1 33.3%;
+    width: 33.3%;
+  }
 }
 @media all and (max-width: 820px) {
   #header {
@@ -1129,6 +1317,18 @@ span.ui-selectmenu-text {
   }
   input[type=submit] {
     width: 100%;
+  }
+  .ui-accordion .price-amount-list {
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 5px;
+  }
+  .purchase-order-info-list li {
+    flex: 1 1 40%;
+    width: 40%;
+  }
+  .ui-accordion .right-holder {
+    column-gap: 10px;
   }
 }
 @media all and (max-width: 600px) {

@@ -1,6 +1,6 @@
 @use "sass:map";
 @use './variables' as vars;
-
+@use './mixins'  as mixins;
 
 // input styles
 input[type="text"], input[type="number"] {
@@ -43,7 +43,7 @@ textarea:hover {
 }
 input[type='text']::-webkit-input-placeholder {
 	font: 15px/45px vars.$base-font, sans-serif;
-	color: map.get(vars.$colors, placeholder);;
+	color: map.get(vars.$colors, placeholder);
 	display: block;
 	text-overflow: ellipsis;
 	white-space: nowrap;
@@ -52,7 +52,7 @@ input[type='text']::-webkit-input-placeholder {
 }
 input[type='text']::-moz-placeholder{
 	font: 15px/42px vars.$base-font, sans-serif;
-	color: map.get(vars.$colors, placeholder);;
+	color: map.get(vars.$colors, placeholder);
 	opacity:0.9;
 	display: block;
 	text-overflow: ellipsis;
@@ -61,7 +61,7 @@ input[type='text']::-moz-placeholder{
 }
 input[type='text']:-moz-placeholder {
 	font: 15px/45px vars.$base-font, sans-serif;
-	color: map.get(vars.$colors, placeholder);;
+	color: map.get(vars.$colors, placeholder);
 	opacity:0.9;
 	font-style:normal;
 	display: block;
@@ -70,7 +70,7 @@ input[type='text']:-moz-placeholder {
 }
 input[type='text']:-ms-input-placeholder {
 	font: 15px/45px vars.$base-font, sans-serif;
-	color: map.get(vars.$colors, placeholder);;
+	color: map.get(vars.$colors, placeholder);
 	opacity:0.9;
 	font-style:normal;
 	display: block;
@@ -78,11 +78,7 @@ input[type='text']:-ms-input-placeholder {
 	white-space: nowrap;
 }
 input[type="submit"] {
-	-webkit-transition: all vars.$transition-time linear;
-	-moz-transition: all vars.$transition-time linear;
-	-ms-transition: all vars.$transition-time linear;
-	-o-transition: all vars.$transition-time linear;
-	transition: all vars.$transition-time linear;
+	@include mixins.transition(all, vars.$transition-time, ease-in-out);
 	cursor: pointer;
 	height: vars.$input-height;
 	min-width: 185px;
@@ -97,6 +93,8 @@ input[type="submit"] {
 input[type="submit"]:hover {
 	opacity: 0.7;
 }
+
+// end input styles
 
 
 .ui-visual-focvs,
@@ -119,6 +117,7 @@ input[type="submit"]:hover {
 	min-height: 100%;
 	position: relative;
 }
+
 .center {
 	padding: 0 20px;
 	position: relative;
@@ -162,11 +161,7 @@ input[type="submit"]:hover {
 // menu-styles
 
 .menu-holder {
-    -webkit-transition: all vars.$transition-time linear;
-    -moz-transition: all vars.$transition-time linear;
-    -ms-transition: all vars.$transition-time linear;
-    -o-transition: all vars.$transition-time linear;
-    transition: all vars.$transition-time linear;
+    @include mixins.transition(all, vars.$transition-time, linear);
 
     .ui-selectmenu-button.ui-button {
       height: 40px;
@@ -243,11 +238,7 @@ input[type="submit"]:hover {
       }
 
       .logo {
-        -webkit-transition: all vars.$transition-time linear;
-        -moz-transition: all vars.$transition-time linear;
-        -ms-transition: all vars.$transition-time linear;
-        -o-transition: all vars.$transition-time linear;
-        transition: all vars.$transition-time linear;
+        @include mixins.transition(all, vars.$transition-time, linear);
 
         &::before {
           content: 'ADG';
@@ -281,11 +272,7 @@ input[type="submit"]:hover {
 
 
 #main {
-	-webkit-transition: padding vars.$transition-time linear;
-	-moz-transition: padding vars.$transition-time linear;
-	-ms-transition: padding vars.$transition-time linear;
-	-o-transition: padding vars.$transition-time linear;
-	transition: padding vars.$transition-time linear;
+    @include mixins.transition(padding, vars.$transition-time, ease-in-out);
 }
 
 #main.open {
@@ -357,11 +344,7 @@ input[type="submit"]:hover {
 .nav-menu a {
 	display: flex;
 	align-items: center;
-	-webkit-transition: all vars.$transition-time linear;
-	-moz-transition: all vars.$transition-time linear;
-	-ms-transition: all vars.$transition-time linear;
-	-o-transition: all vars.$transition-time linear;
-	transition: all vars.$transition-time linear;
+    @include mixins.transition(all, vars.$transition-time, linear);
 	text-decoration: none;
 }
 
@@ -573,12 +556,7 @@ input[type="submit"]:hover {
 	}
 
 	a {
-		-webkit-transition: all vars.$transition-time linear;
-		-moz-transition: all vars.$transition-time linear;
-		-ms-transition: all vars.$transition-time linear;
-		-o-transition: all vars.$transition-time linear;
-		transition: all vars.$transition-time linear;
-		transition: all vars.$transition-time linear;
+        @include mixins.transition(all, vars.$transition-time, ease-in-out);
 		text-decoration: none;
 		color: map.get(vars.$colors, bgColor);
 		padding: 7px 14px;
@@ -654,7 +632,8 @@ input[type="submit"]:hover {
 	background: #fff;
 	border: 1px map.get(vars.$colors, borderColor) solid;
 	border-radius: 20px;
-	padding: 25px;
+	padding: 10px 15px;
+	margin-bottom: 20px;
 }
 
 .form-row {
@@ -944,10 +923,187 @@ span.ui-selectmenu-text {
 	margin: 0;
 }
 
+// datepicker styles
+
 .ui-datepicker-prev:hover,
 .ui-datepicker-next:hover {
     background: none;
     color: map.get(vars.$colors, primary);
     border-color: map.get(vars.$colors, primary);
 }
+
+// end datepicker styles
+
+.more-btn {
+	background: map.get(vars.$colors, white);
+	border: 1px map.get(vars.$colors, borderColor) solid;
+	color: map.get(vars.$colors, primary);
+	display: flex;
+	margin: 0;
+	width: 36px;
+	height: 36px;
+	justify-content: center;
+	align-items: center;
+	border-radius: 12px;
+	flex: 0 0 auto;
+	font-size: 14px;
+	line-height: 20px;
+	font-weight: 700;
+	font-style: normal;
+	@include mixins.transition(all, vars.$transition-time, ease-in-out);
+	cursor: pointer;
+
+	&:active, &:hover {
+		 background: map.get(vars.$colors, secondary);
+		 color: map.get(vars.$colors, white);
+		 border-color: map.get(vars.$colors, white);
+	}
+}
+
+.purchase-order-info-list {
+	display: flex;
+	column-gap: 36px;
+	row-gap: 20px;
+	flex-wrap: wrap;
+
+	li {
+		.title {
+			font-size: 12px;
+			font-weight: 600;
+			color: map.get(vars.$colors, titleColor);
+			display: block;
+			margin-bottom: 5px;
+		}
+		.info {
+			font-size: 14px;
+			color: map.get(vars.$colors, textColor);
+		}
+	}
+}
+
+
+.purchase-order-holder {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+// accordion styles
+.ui-accordion {
+    position: relative;
+    .ui-accordion-header {
+        padding: 10px 10px 10px 50px;
+        margin: 0 0 15px;
+		  column-gap: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-radius: vars.$input-border-radius !important;
+        border-color: map.get(vars.$colors, borderColor);
+    }
+
+    .ui-accordion-content {
+        margin: 0 0 15px;
+        overflow: inherit;
+        height: auto !important;
+        padding: 10px 0 0 0;
+        border: none;
+    }
+
+    .ui-accordion-header-active {
+        margin: 0;
+        border-radius: vars.$input-border-radius !important;
+        .ui-accordion-header-icon {
+            margin: -4px 0 0 0;
+            transform: rotate(-135deg);
+        }
+    }
+
+    .ui-accordion-header-active,
+    .ui-state-hover {
+        background-color: map.get(vars.$colors, softSecondary);
+        border-color: map.get(vars.$colors, borderColor);
+    }
+
+    .ui-accordion-header-icon {
+        @include mixins.transition(all, vars.$transition-time, linear);
+        position: absolute;
+        top: 50%;
+		  left: 23px;
+        margin: 0;
+        background: none;
+        width: 8px;
+        height: 8px;
+        border-style: solid;
+        border-width: 0 2px 2px 0;
+        border-color: map.get(vars.$colors, secondary);
+        transform: rotate(45deg) translate(-50%, -50%);
+        transform-origin: center;
+    }
+
+    .right-holder {
+        display: flex;
+        align-items: center;
+        column-gap: 30px;
+    }
+
+}
+
+.price-amount-list {
+    display: flex;
+	 flex-wrap: wrap;
+    align-items: center;
+    column-gap: 38px;
+	 row-gap: 10px;
+    color: map.get(vars.$colors, textColor);
+
+    .price {
+        font-weight: 600;
+    }
+}
+.price-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+
+    .price-box {
+        overflow: hidden;
+        border: 1px map.get(vars.$colors, borderColor) solid;
+        border-radius: vars.$input-border-radius;
+        &:nth-last-child(2),
+        &:last-child {
+        grid-column: 3;
+        }
+    }
+
+    .price-header {
+        background: map.get(vars.$colors, bgSecondaryColor);
+        padding: 10px;
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 16px;
+    }
+}
+
+dl {
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	gap: 13px;
+	padding: 10px;
+
+    dt {
+      font-weight: normal;
+      text-align: left;
+    }
+
+    dd {
+      margin: 0;
+      font-weight: 700;
+      text-align: right;
+    }
+
+    address {
+        font-style: normal;
+    }
+  }
 
