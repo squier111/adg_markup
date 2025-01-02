@@ -5,7 +5,7 @@ const browserSync = require("browser-sync").create();
 
 // Paths
 const paths = {
-  scss: "./scss/*.scss",
+  scss: "./scss/all.scss",
   css: "./css",
   js: "./js/*.js",
   html: "./html/*.html",

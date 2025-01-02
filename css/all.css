@@ -165,6 +165,109 @@ ul {
   list-style: none;
 }
 
+input[type=text], input[type=number] {
+  width: 100%;
+  height: 48px;
+  border-radius: 16px;
+  color: #152238;
+  font-size: 14px;
+  line-height: 45px;
+  display: block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  background: #fff;
+  border: 1px #E3E4E7 solid;
+  padding: 0 40px 0 16px;
+  box-sizing: border-box;
+}
+
+textarea {
+  width: 100%;
+  resize: none;
+  height: 137px;
+  color: #000;
+  font-size: 15px;
+  line-height: 17px;
+  background: #fff;
+  border: 1px #E3E4E7 solid;
+  padding: 12px;
+  box-sizing: border-box;
+  margin: 0 0 21px;
+}
+
+input[type=text].error {
+  border-color: #f3292e;
+}
+
+input:focus,
+input:hover,
+textarea:focus,
+textarea:hover {
+  border-color: #000;
+}
+
+input[type=text]::-webkit-input-placeholder {
+  font: 15px/45px "Inter", sans-serif, sans-serif;
+  color: #999999;
+  display: block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  opacity: 0.9;
+  font-style: normal;
+}
+
+input[type=text]::-moz-placeholder {
+  font: 15px/42px "Inter", sans-serif, sans-serif;
+  color: #999999;
+  opacity: 0.9;
+  display: block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-style: normal;
+}
+
+input[type=text]:-moz-placeholder {
+  font: 15px/45px "Inter", sans-serif, sans-serif;
+  color: #999999;
+  opacity: 0.9;
+  font-style: normal;
+  display: block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+input[type=text]:-ms-input-placeholder {
+  font: 15px/45px "Inter", sans-serif, sans-serif;
+  color: #999999;
+  opacity: 0.9;
+  font-style: normal;
+  display: block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+input[type=submit] {
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -ms-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+  cursor: pointer;
+  height: 48px;
+  min-width: 185px;
+  color: #fff;
+  background: #2483E2;
+  font: 14px/38px "Inter", sans-serif, sans-serif;
+  border: none;
+  padding: 0 27px 0 27px;
+  border-radius: 16px !important;
+  box-sizing: border-box;
+}
+
+input[type=submit]:hover {
+  opacity: 0.7;
+}
+
 .ui-visual-focvs,
 .ui-visual-focus,
 .ui-state-focus {
@@ -601,7 +704,6 @@ ul {
   margin: 0 20px 0 0;
   padding: 0 12px 0 0;
 }
-
 .breadcrumps li:before {
   content: "";
   position: absolute;
@@ -616,12 +718,10 @@ ul {
   transform-origin: center;
   transform: rotate(-45deg);
 }
-
 .breadcrumps li:last-child:before,
-.breadcrumps li:last-child:after {
+.breadcrumps li :last-child:after {
   display: none;
 }
-
 .breadcrumps li a {
   -webkit-transition: all 0.2s linear;
   -moz-transition: all 0.2s linear;
@@ -636,118 +736,13 @@ ul {
   border-radius: 8px;
   font-weight: 700;
 }
-
+.breadcrumps li a:hover {
+  opacity: 0.7;
+}
 .breadcrumps li.active a {
   background: rgba(161, 167, 175, 0.16);
   font-weight: 700;
   color: #152238;
-}
-
-.breadcrumps li a:hover {
-  opacity: 0.7;
-}
-
-input[type=text], input[type=number] {
-  width: 100%;
-  height: 48px;
-  border-radius: 16px;
-  color: #152238;
-  font-size: 14px;
-  line-height: 45px;
-  display: block;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  background: #fff;
-  border: 1px #E3E4E7 solid;
-  padding: 0 40px 0 16px;
-  box-sizing: border-box;
-}
-
-textarea {
-  width: 100%;
-  resize: none;
-  height: 137px;
-  color: #000;
-  font-size: 15px;
-  line-height: 17px;
-  background: #fff;
-  border: 1px #E3E4E7 solid;
-  padding: 12px;
-  box-sizing: border-box;
-  margin: 0 0 21px;
-}
-
-input[type=text].error {
-  border-color: #f3292e;
-}
-
-input:focus,
-input:hover,
-textarea:focus,
-textarea:hover {
-  border-color: #000;
-}
-
-input[type=text]::-webkit-input-placeholder {
-  font: 15px/45px "Inter", sans-serif, sans-serif;
-  color: #999999;
-  display: block;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  opacity: 0.9;
-  font-style: normal;
-}
-
-input[type=text]::-moz-placeholder {
-  font: 15px/42px "Inter", sans-serif, sans-serif;
-  color: #999999;
-  opacity: 0.9;
-  display: block;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  font-style: normal;
-}
-
-input[type=text]:-moz-placeholder {
-  font: 15px/45px "Inter", sans-serif, sans-serif;
-  color: #999999;
-  opacity: 0.9;
-  font-style: normal;
-  display: block;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-input[type=text]:-ms-input-placeholder {
-  font: 15px/45px "Inter", sans-serif, sans-serif;
-  color: #999999;
-  opacity: 0.9;
-  font-style: normal;
-  display: block;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-input[type=submit] {
-  -webkit-transition: all 0.2s linear;
-  -moz-transition: all 0.2s linear;
-  -ms-transition: all 0.2s linear;
-  -o-transition: all 0.2s linear;
-  transition: all 0.2s linear;
-  cursor: pointer;
-  height: 48px;
-  min-width: 185px;
-  color: #fff;
-  background: #2483E2;
-  font: 14px/38px "Inter", sans-serif, sans-serif;
-  border: none;
-  padding: 0 27px 0 27px;
-  border-radius: 16px !important;
-  box-sizing: border-box;
-}
-
-input[type=submit]:hover {
-  opacity: 0.7;
 }
 
 #header {
