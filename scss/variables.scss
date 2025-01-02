@@ -9,11 +9,19 @@ $colors: (
     primary: #152238,
     secondary: #2483E2,
     softSecondary: #F2F7FD,
+    open: #2483E2,
     danger: #CE1313,
+    success: #10A21E,
+    warning: #FFB23D,
+    dangerBg: #401717,
+    successBg: #C9F3CE,
+    warningBg: #FFF0DA,
+    openBg: #1B3754,
     white: #fff,
 );
 
 $base-font: 'Inter', sans-serif;
-$input-border-radius: 16px;
+$border-radius: 16px;
+$border-radius-half-size: $border-radius * 0.5;
 $input-height: 48px;
 $transition-time: 0.2s;

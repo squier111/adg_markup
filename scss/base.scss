@@ -6,7 +6,7 @@
 input[type="text"], input[type="number"] {
 	width: 100%;
 	height: vars.$input-height;
-	border-radius: vars.$input-border-radius;
+	border-radius: vars.$border-radius;
 	color: map.get(vars.$colors, primary);
 	font-size: 14px;
 	line-height: 45px;
@@ -725,7 +725,7 @@ form .two-columns .col {
 .ui-selectmenu-button.ui-button {
 	width: 100%;
 	height: vars.$input-height;
-	border-radius: vars.$input-border-radius;
+	border-radius: vars.$border-radius;
 	color: map.get(vars.$colors, bgColor);
 	font-size: 15px;
 	line-height: 45px;
@@ -799,7 +799,7 @@ span.ui-selectmenu-text {
 .radio-container {
 	background: map.get(vars.$colors, bgSecondaryColor);;
 	padding: 7px 2px 7px 2px;
-	border-radius: vars.$input-border-radius;
+	border-radius: vars.$border-radius;
 	margin: 0 0 23px;
 }
 
@@ -998,7 +998,7 @@ span.ui-selectmenu-text {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        border-radius: vars.$input-border-radius !important;
+        border-radius: vars.$border-radius !important;
         border-color: map.get(vars.$colors, borderColor);
     }
 
@@ -1012,7 +1012,7 @@ span.ui-selectmenu-text {
 
     .ui-accordion-header-active {
         margin: 0;
-        border-radius: vars.$input-border-radius !important;
+        border-radius: vars.$border-radius !important;
         .ui-accordion-header-icon {
             margin: -4px 0 0 0;
             transform: rotate(-135deg);
@@ -1069,7 +1069,7 @@ span.ui-selectmenu-text {
     .price-box {
         overflow: hidden;
         border: 1px map.get(vars.$colors, borderColor) solid;
-        border-radius: vars.$input-border-radius;
+        border-radius: vars.$border-radius;
         &:nth-last-child(2),
         &:last-child {
         grid-column: 3;
@@ -1107,3 +1107,31 @@ dl {
     }
   }
 
+// statuses styles
+.statuses {
+	border-radius: vars.$border-radius-half-size;
+	font-weight: 600;
+	font-size: 14px;
+	line-height: 24px;
+	padding: 0 8px;
+	display: inline-block;
+	vertical-align: top;
+	&.open {
+		background: map.get(vars.$colors, openBg);
+		color: map.get(vars.$colors, open);
+	}
+	&.success {
+		background: map.get(vars.$colors, successBg);
+		color: map.get(vars.$colors, success);
+	}
+	&.warning {
+		background: map.get(vars.$colors, warningBg);
+		color: map.get(vars.$colors, warning);
+	}
+	&.danger {
+		background: map.get(vars.$colors, dangerBg);
+		color: map.get(vars.$colors, danger);
+	}
+}
+
+// end statuses style

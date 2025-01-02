@@ -1266,6 +1266,32 @@ dl address {
   font-style: normal;
 }
 
+.statuses {
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 24px;
+  padding: 0 8px;
+  display: inline-block;
+  vertical-align: top;
+}
+.statuses.open {
+  background: #1B3754;
+  color: #2483E2;
+}
+.statuses.success {
+  background: #C9F3CE;
+  color: #10A21E;
+}
+.statuses.warning {
+  background: #FFF0DA;
+  color: #FFB23D;
+}
+.statuses.danger {
+  background: #401717;
+  color: #CE1313;
+}
+
 @media all and (max-width: 1110px) {
   form .two-columns {
     flex-direction: column;
