@@ -752,6 +752,7 @@ input[type=submit]:hover {
 
 #header {
   padding: 13px 20px;
+  margin: 0 0 20px;
   border: 1px #E3E4E7 solid;
   display: flex;
   justify-content: space-between;
@@ -1140,5 +1141,3 @@ span.ui-selectmenu-text {
     width: 100%;
   }
 }
-
-/*# sourceMappingURL=all.css.map */

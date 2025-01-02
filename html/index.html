@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+	@@include('./partials/header.html')
+	<body>
+		<div id="wrapper">
+			<div class="menu-holder">
+				<div class="menu-top">
+					<a href="#" class="open-menu">
+						<i class="fa-solid fa-bars"></i>
+					</a>
+				</div>
+				<div class="nav-controls">
+					<label class="form-row">
+						<select>
+							<option>Utility Billing System</option>
+							<option selected="selected">Fund Management System</option>
+						</select>
+					</label>
+					<label class="form-row">
+						<div class="input-holder">
+							<i class="fa-solid fa-magnifying-glass"></i>
+							<input type="text" placeholder="Search...">
+						</div>
+					</label>
+				</div>
+				<div class="scroll-holder">
+					<nav id="nav">
+						<ul class="nav-menu">
+							<li>
+								<a href="#">
+									<i class="fa-solid fa-house"></i>
+									<span>Home</span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<i class="fa-solid fa-clock"></i>
+									<span>Time Card and HR Self Service</span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<i class="fa-solid fa-user-group"></i>
+									<span>Dept/Manager HR Self-Service</span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<i class="fa-solid fa-file"></i>
+									<span>Requisitions Main Menu</span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<i class="fa-solid fa-money-check-dollar"></i>
+									<span>Department Budgeting</span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<i class="fa-solid fa-message"></i>
+									<span>Inquiries Menu</span>
+								</a>
+								<ul>
+									<li>
+									  <a href="#">GL Master Inquiry</a>
+									</li>
+									<li>
+									  <a href="#">Funds Master Inquiry</a>
+									</li>
+									<li>
+									  <a href="#">Simple GL Inquiry</a>
+									</li>
+									<li>
+									  <a href="#">Advanced Financial Reports</a>
+									</li>
+									<li>
+									  <a href="#">Vendor/Invoice Inquiry</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">
+									<i>RP</i>
+									<span>Reports</span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<i>WO</i>
+									<span>Work Orders</span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<i>FM</i>
+									<span>File Maintenance</span>
+								</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+				<div class="log-out-container">
+					<a href="#">
+						<i class="fa-solid fa-right-from-bracket"></i>
+						<span>Log Out</span>
+					</a>
+				</div>
+				<div class="bottom-nav-holder">
+					<strong class="logo"><a href="#"></a></strong>
+					<a href="#" class="share">
+						<i class="fa-solid fa-arrow-up-right-from-square"></i>
+					</a>
+				</div>
+			</div>
+			<main id="main">
+				<header id="header">
+					<ul class="breadcrumps">
+						<li>
+							<a href="#">Delinquent</a>
+						</li>
+						<li class="active">
+							<a href="#">Disconnect Report</a>
+						</li>
+					</ul>
+					<ul class="right-menu">
+						<li>
+							<a href="#">
+								<span class="counter">8</span>
+								<i class="fa-solid fa-bookmark"></i>
+							</a>
+						</li>
+						<li>
+							<li>
+								<a href="#">
+									<i class="fa-solid fa-circle-info"></i>
+								</a>
+							</li>
+						</li>
+						<li>
+							<a href="#">
+								<i class="fa-solid fa-copy"></i>
+							</a>
+						</li>
+					</ul>
+				</header>
+				<div class="center">
+					<div class="info-block">
+						<h2>Disconnect Report</h2>
+						<p>This program generates a report of accounts based on the selections below and do not have a "Disconnect Exempt Through Date" prior to the disconnect date. The arrears amount is determined by the due date entered below. Penalties are accumulated separately and are included in the account balance. The program may optionally turn-off metered services and create a disconnect work order.</p>
+					</div>
+					<div class="container">
+						<form action="#">
+							<fieldset>
+								<div class="two-columns">
+									<div class="col">
+										<label class="form-row">
+											<span>Last due date for arrears</span>
+											<div class="input-holder">
+												<input type="text" placeholder="Select Date" class="datepicker">
+												<i class="fa-solid fa-calendar"></i>
+											</div>
+										</label>
+										<label class="form-row">
+											<span>Disconnect Date</span>
+											<div class="input-holder">
+												<input type="text" placeholder="Select Date" class="datepicker">
+												<i class="fa-solid fa-calendar"></i>
+											</div>
+										</label>
+										<label class="form-row">
+											<span>Minimum Delinquent Balance</span>
+											<div class="input-holder">
+												<input type="number" placeholder="Enter amount">
+											</div>
+										</label>
+										<fieldset class="checkbox-container">
+											<label>Apply Unbilled Credits
+												<input type="checkbox"/>
+											</label>
+										</fieldset>
+										<label class="form-row">
+											<span>Print All Notes For Class Code</span>
+											<select>
+												<option>BFF - Backflow Test Failure</option>
+												<option>Subdivision / Zone A</option>
+												<option selected="selected">BFF - Backflow Test Failure</option>
+												<option>Subdivision / Zone A</option>
+												<option>Faster</option>
+											</select>
+										</label>
+										<fieldset class="checkbox-container">
+											<label>Count Delinquent Bills
+												<input type="checkbox"/>
+											</label>
+										</fieldset>
+										<label class="form-row">
+											<span>Incl Delinquent Bills From</span>
+											<div class="input-holder">
+												<input type="text" placeholder="Select Date" class="datepicker">
+												<i class="fa-solid fa-calendar"></i>
+											</div>
+										</label>
+										<fieldset class="checkbox-container">
+											<label>Apply Unbilled Credits
+												<input type="checkbox"/>
+											</label>
+										</fieldset>
+										<label class="form-row">
+											<span>Auto-Create A/R Adj Fees</span>
+											<div class="input-holder">
+												<select disabled>
+													<option>None</option>
+													<option>Subdivision / Zone A</option>
+													<option selected="selected">None</option>
+													<option>Subdivision / Zone A</option>
+													<option>Faster</option>
+												</select>
+											</div>
+										</label>
+									</div>
+									<div class="col">
+										<label class="form-row">
+											<span>Cycle Code</span>
+											<div class="input-holder">
+												<select>
+													<option>Not Set</option>
+													<option>Subdivision / Zone A</option>
+													<option selected="selected">Subdivision / Zone A</option>
+													<option>Subdivision / Zone A</option>
+													<option>Faster</option>
+												</select>
+											</div>
+										</label>
+										<label class="form-row">
+												<span>Service Code</span>
+												<div class="input-holder">
+													<select>
+														<option>Subdivision / Zone A</option>
+														<option selected="selected">Ambulance</option>
+														<option>Subdivision / Zone A</option>
+														<option>Faster</option>
+													</select>
+												</div>
+										</label>
+										<label class="form-row">
+											<span>Include User Types</span>
+											<div class="input-holder">
+												<select>
+													<option>Subdivision / Zone A</option>
+													<option selected="selected">Commercial</option>
+													<option>Subdivision / Zone A</option>
+													<option>Faster</option>
+												</select>
+											</div>
+										</label>
+										<fieldset class="checkbox-container">
+											<label>Include Payment Plan Customers
+												<input type="checkbox"/>
+											</label>
+											<label>Include Final Billed Customers
+												<input type="checkbox"/>
+											</label>
+											<label>Sep Line For Start/Last Pd Dt & Serv Add/CSZ
+												<input type="checkbox"/>
+											</label>
+											<label>Include Payments Not Yet Updated
+												<input type="checkbox"/>
+											</label>
+											<label>Include Deposits
+												<input type="checkbox"/>
+											</label>
+											<label>Skip Customers, where All Meters are OFF
+												<input type="checkbox"/>
+											</label>
+											<label>Skip Budget Bill Customers
+												<input type="checkbox"/>
+											</label>
+											<label>Skip AutoPay Customers
+												<input type="checkbox"/>
+											</label>
+										</fieldset>
+										<div class="form-row two-items">
+											<label class="form-row">
+												<span>Print Order</span>
+												<div class="input-holder">
+													<select>
+														<option>Subdivision / Zone A</option>
+														<option selected="selected">Account</option>
+														<option>Subdivision / Zone A</option>
+														<option>Faster</option>
+													</select>
+												</div>
+											</label>
+											<label class="form-row">
+												<span>Print Format</span>
+												<div class="input-holder">
+													<select>
+														<option>Office</option>
+														<option selected="selected">Office</option>
+														<option>Subdivision / Zone A</option>
+														<option>Faster</option>
+													</select>
+												</div>
+											</label>
+										</div>
+									</div>
+								</div>
+								<div class="form-bottom">
+									<h3>Output</h3>
+									<div class="two-columns">
+										<div class="col">
+											<fieldset class="radio-container">
+												<label for="radio-1">File Output</label>
+												<input type="radio" name="radio-1" id="radio-1">
+												<label for="radio-2">Direct To Printer</label>
+												<input type="radio" name="radio-1" id="radio-2">
+											</fieldset>
+										</div>
+										<div class="col">
+											<div class="form-row two-items">
+												<label class="form-row">
+													<span>Output Format</span>
+													<div class="input-holder">
+														<select>
+															<option>Subdivision / Zone A</option>
+															<option selected="selected">Adobe Acrobat (PDF)</option>
+															<option>Subdivision / Zone A</option>
+															<option>Faster</option>
+														</select>
+													</div>
+												</label>
+												<div class="two-items">
+													<label class="form-row">
+														<span>Tray</span>
+														<div class="input-holder">
+															<select>
+																<option>Office</option>
+																<option selected="selected">Default</option>
+																<option>Subdivision / Zone A</option>
+																<option>Faster</option>
+															</select>
+														</div>
+													</label>
+													<label class="form-row">
+														<span>Copies</span>
+														<input type="number">
+													</label>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="submit-holder">
+									<input type="submit" value="Submit">
+								</div>
+							</fieldset>
+						</form>
+					</div>
+				</div>
+			</main>
+		</div>
+	</body>
+</html>
+
+
+
