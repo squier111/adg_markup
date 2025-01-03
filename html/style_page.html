@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	@@include('./partials/header.html')
+	<body>
+		<div id="wrapper">
+			@@include('./partials/sidebar.html')
+			<main id="main">
+				<div class="center">
+					<div class="container" style="margin-top: 20px;">
+						<h1>H1 header</h1>
+
+						<h2>H2 header</h2>
+
+						<h3>H3 header</h3>
+
+						<h4>H4 header</h4>
+						<p  style="margin-bottom: 10px;">paragaph</p>
+
+						<div style="display:flex; column-gap: 10px; margin-bottom: 20px;">
+								<span class="statuses warning">Open</span>
+								<span class="statuses success">Completed</span>
+								<span class="statuses danger">Cancelled</span>
+						</div>
+
+						<label class="form-row">
+							<span>Input with datepicker example</span>
+							<div class="input-holder">
+								<input type="text" placeholder="Select Date" class="datepicker">
+								<i class="fa-solid fa-calendar"></i>
+							</div>
+						</label>
+
+						<label class="form-row">
+							<span>Select example</span>
+							<select>
+								<option>BFF - Backflow Test Failure</option>
+								<option>Subdivision / Zone A</option>
+								<option selected="selected">BFF - Backflow Test Failure</option>
+								<option>Subdivision / Zone A</option>
+								<option>Faster</option>
+							</select>
+						</label>
+
+						<fieldset class="radio-container">
+							<label for="radio-1">File Output</label>
+							<input type="radio" name="radio-1" id="radio-1">
+							<label for="radio-2">Direct To Printer</label>
+							<input type="radio" name="radio-1" id="radio-2">
+						</fieldset>
+
+						<fieldset class="checkbox-container">
+							<label>checkbox 1
+								<input type="checkbox"/>
+							</label>
+							<label>checkbox 2
+								<input type="checkbox"/>
+							</label>
+						</fieldset>
+
+						<div id="accordion">
+							<div>
+								<h4>Item 1</h4>
+								<div class="right-holder">
+									<button class="more-btn">
+										<i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+									</button>
+								</div>
+							</div>
+							<div>
+								<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore asperiores atque dolorum amet mollitia quaerat excepturi provident quibusdam quos, sunt praesentium, eveniet libero. Velit deserunt rerum omnis aspernatur harum consectetur.</p>
+							</div>
+							<div>
+								<h4>Item 2</h4>
+								<button class="more-btn">
+									<i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+								</button>
+							</div>
+							<div>
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit unde molestiae velit, et adipisci laboriosam nemo eos quas perferendis illo similique sit minima dolore tenetur reiciendis nobis asperiores reprehenderit dolorum!</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</main>
+		</div>
+	</body>
+</html>
